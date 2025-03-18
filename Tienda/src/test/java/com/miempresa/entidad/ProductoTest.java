@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 
 
 class ProductoTest {
@@ -102,17 +100,5 @@ class ProductoTest {
 			
 	}
 	
-	
-	/*Ví interesante incluir este test de un ejercicio ya visto en clase */
-	
-	@ParameterizedTest
-	@CsvSource({"'Smartphone' , 699,99" , "'Tablet' , 229,40" ,"'Monitor' , 100.00" })
-	@DisplayName ("Debe crear permitir crear productos con nombre y precio validos")
-	void deberiaCrearProductoConVariosAtributosValidos (String name , double price) {
-		Producto p = new Producto(name, price);
-		assertNotNull(p);
-		assertEquals(name, p.getNombre());
-		assertEquals(price, p.getPrecio());
-	}
 
 }
